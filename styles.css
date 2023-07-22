@@ -28,7 +28,7 @@
     box-shadow: inset 3px 3px 5px rgb(126, 126, 126);
 }
 
-.text {
+.display-text {
     font-family: "Calculator";
     font-size: 50px;
     margin: 0 15px;
@@ -74,12 +74,12 @@
     font-weight: 600;
 }
 
-.clear {
-    background-color: rgb(240, 156, 30) !important;
+#clear {
+    background-color: rgb(240, 156, 30);
     box-shadow: 3px 3px 5px rgb(66, 66, 66), inset 3px 3px 5px rgb(255, 218, 149), inset -3px -3px 5px rgb(165, 119, 33)  !important;
 }
 
-.equals {
+#equals {
     background-color: rgb(87, 196, 196) !important;
     box-shadow: 3px 3px 5px rgb(66, 66, 66), inset 3px 3px 5px rgb(137, 231, 231), inset -3px -3px 5px rgb(42, 131, 131)  !important;
     flex: 1;
