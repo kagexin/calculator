@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Calculator;
+    src: url(Calculator.ttf);
+}
+
+.calculator-box {
+    height: 500px;
+    width: 350px;
+    background-color: rgb(104, 104, 104);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-display {
+    height: 80px;
+    width: 350px;
+    background-color:rgb(189, 189, 189);
+    border-radius: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text {
+    font-family: "Calculator";
+    font-size: 50px;
+    margin: 0 15px;
+    text-align: right;
+}
