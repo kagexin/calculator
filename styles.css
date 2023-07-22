@@ -10,7 +10,9 @@
     border-radius: 20px;
     padding: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .calculator-display {
@@ -29,4 +31,55 @@
     font-size: 50px;
     margin: 0 15px;
     text-align: right;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.row-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row, .col {
+    display: flex;
+    gap: 10px;
+}
+
+.col {
+    flex-direction: column;
+    height: 340px;
+}
+
+.row div, .col div {
+    height: 60px;
+    width: 70px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text {
+    font-family: "Open Sans";
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.clear {
+    background-color: rgb(240, 156, 30) !important;
+}
+
+.equals {
+    background-color: rgb(87, 196, 196) !important;
+    flex: 1;
+}
+
+.zero {
+    flex: 1;
 }
