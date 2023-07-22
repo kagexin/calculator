@@ -4,26 +4,28 @@
 }
 
 .calculator-box {
-    height: 500px;
-    width: 350px;
+    height: 450px;
+    width: 330px;
     background-color: rgb(104, 104, 104);
     border-radius: 20px;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    box-shadow: inset -5px -5px 15px rgb(73, 73, 73), inset 3px 3px 8px rgb(172, 172, 172);
 }
 
 .calculator-display {
     height: 80px;
-    width: 350px;
+    width: 330px;
     background-color:rgb(189, 189, 189);
     border-radius: 10px;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    box-shadow: inset 3px 3px 5px rgb(126, 126, 126);
 }
 
 .text {
@@ -57,12 +59,13 @@
 
 .row div, .col div {
     height: 60px;
-    width: 70px;
+    width: 75px;
     background-color: rgb(233, 233, 233);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 3px 3px 3px rgb(66, 66, 66), inset 3px 3px 5px rgb(255, 255, 255), inset -3px -3px 5px rgb(148, 148, 148);
 }
 
 .btn-text {
@@ -73,10 +76,12 @@
 
 .clear {
     background-color: rgb(240, 156, 30) !important;
+    box-shadow: 3px 3px 5px rgb(66, 66, 66), inset 3px 3px 5px rgb(255, 218, 149), inset -3px -3px 5px rgb(165, 119, 33)  !important;
 }
 
 .equals {
     background-color: rgb(87, 196, 196) !important;
+    box-shadow: 3px 3px 5px rgb(66, 66, 66), inset 3px 3px 5px rgb(137, 231, 231), inset -3px -3px 5px rgb(42, 131, 131)  !important;
     flex: 1;
 }
 
