@@ -1,20 +1,39 @@
-function add(param1, param2) {
-    return (param1 + param2);
+let result;
+let prevResult;
+
+
+function add(num1, num2) {
+    result = (num1 + num2)
+    return result;
 }
 
-function subtract(param1, param2) {
-    return (param1 - param2);
+function subtract(num1, num2) {
+    result = (num1 - num2);
+    return result;
 }
 
-function multiply(param1, param2) {
-    return (param1 * param2);
+function multiply(num1, num2) {
+    result = (num1 - num2);
+    return result;
 }
 
-function divide(param1, param2) {
-    return (param1 / param2);
+function divide(num1, num2) {
+    result = (num1 - num2);
+    return result;
 }
 
 
 function operate(param1, operand, param2) {
-    
+    if (operand = "+" ) {
+        add(param1, param2);
+        prevResult = result;
+    }
 }
+
+const numButton = document.querySelectorAll(".numButton");
+const displayText = document.querySelector(".display-text");
+
+numButton.forEach(element => element.addEventListener("click", () => {
+    displayText.textContent += element.textContent;
+    })
+)
