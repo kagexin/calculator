@@ -57,7 +57,7 @@
     height: 340px;
 }
 
-.button {
+.button, .numButton {
     height: 60px;
     width: 75px;
     background-color: rgb(233, 233, 233);
@@ -69,11 +69,11 @@
     font-weight: 600;
 }
 
-.button:hover {
+.button:hover, .numButton:hover {
     background-color:  rgb(202, 202, 202);
 }
 
-.button:active {
+.button:active, .numButton:active {
     background-color:  rgb(161, 161, 161);
 }
 
