@@ -4,7 +4,7 @@
 }
 
 .calculator-box {
-    height: 450px;
+    height: 475px;
     width: 330px;
     background-color: rgb(104, 104, 104);
     border-radius: 20px;
@@ -17,22 +17,27 @@
 }
 
 .calculator-display {
-    height: 80px;
+    height: 105px;
     width: 330px;
     background-color:rgb(189, 189, 189);
     border-radius: 10px;
     margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
     box-shadow: inset 3px 3px 5px rgb(126, 126, 126);
+}
+
+.prev-result {
+    font-family: "Calculator";
+    font-size: 25px;
+    margin: 10px 15px 0;
 }
 
 .display-text {
     font-family: "Calculator";
     font-size: 50px;
     margin: 0 15px;
-    text-align: right;
 }
 
 .buttons {
