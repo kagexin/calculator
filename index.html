@@ -15,7 +15,8 @@
     <div class="calculator-box">
 
         <div class="calculator-display">
-            <p class="display-text"></p>
+            <div class="prev-result">123</div>
+            <p class="display-text">123</p>
         </div>
 
         <div class="buttons">
@@ -24,8 +25,8 @@
 
                 <div class="row r1">
                     <button class="button" id="clear">C</button>
-                    <button class="button">DEL</button>
-                    <button class="button">÷</button>
+                    <button class="button" id="delete">DEL</button>
+                    <button class="button operand" id="divide">÷</button>
                 </div>
 
                 <div class="row r2">
@@ -56,9 +57,9 @@
             <div class="col-btns">
 
                 <div class="col c1">
-                    <button class="button">×</button>
-                    <button class="button">-</button>
-                    <button class="button">+</button>
+                    <button class="button operand" id="multiply">×</button>
+                    <button class="button operand" id="subtract">-</button>
+                    <button class="button operand" id="add">+</button>
                     <button class="button" id="equals">=</button>
                 </div>
 
