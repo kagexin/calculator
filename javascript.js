@@ -19,19 +19,28 @@ function division(num1, num2) {
 
 // Function to operate between two numbers
 
-function operate(param1, param2, operand) {
-     switch (operand) {
-        case "+":
-            return addition(param1, param2);
-        case "-":
-            return subtraction(param1, param2);
-        case "÷":
-            return division(param1, param2);
-        case "×":
-            return multiplication(param1, param2);
-     }  
+function operate(numArr, operandArr) {
+    let result = numArr[0];
+    
+    for (let i = 0; i < operandArr.length; i++) {
+        switch (operandArr[i]) {
+            case "+":
+                result = addition(result, numArr[i + 1]);
+                break;
+            case "-":
+                result = subtraction(result, numArr[i + 1]);
+                break;
+            case "÷":
+                result = division(result, numArr[i + 1]);
+                break;
+            case "×":
+                result = multiplication(result, numArr[i + 1]);
+                break;
+         }
+    }
+    return result;
 }
-
+    
 
 // Make number button presses show up in calculator display
 
@@ -52,7 +61,8 @@ const prevResultDisplay = document.querySelector(".prev-result");
 
 clear.addEventListener("click", () => {
     displayText.textContent = "";
-    prevResultDisplay.textContent = "";
+    numArray = [];
+    operandArray = [];
 })
 
 del.addEventListener("click", () => {
@@ -64,25 +74,24 @@ del.addEventListener("click", () => {
 
 const equals = document.querySelector("#equals");
 const operandBtns = document.querySelectorAll(".operand");
-let operand, num1, num2, result;
+
+let numArray = [];
+let operandArray = [];
 
 operandBtns.forEach(button => button.addEventListener("click", (event) => {
-    num1 = parseInt(displayText.textContent);
-    operand = event.target.textContent;
-    prevResultDisplay.textContent = `${num1} ${operand}`;
+    numArray.push(parseInt(displayText.textContent));
+    operandArray.push(event.target.textContent);
     displayText.textContent = "";
     })
 )
 
 equals.addEventListener("click", () => equate())
 
-
 function equate() {
-    num2 = parseInt(displayText.textContent);
-    prevResultDisplay.textContent = `${num1} ${operand} ${num2} =`
-    result = operate(num1, num2, operand);
+    numArray.push(parseInt(displayText.textContent));
+    result = operate(numArray, operandArray);
 
-    if (displayText.textContent != "") {
-        displayText.textContent = result;
-    }
+    displayText.textContent = result;
+    numArray = [];
+    operandArray = [];
 }
